@@ -80,26 +80,6 @@ const gracefulShutdown = (signal) => {
   process.exit(0);
 };
 
-// ========== CHECK CHANNELS FUNCTION ==========
-const checkUserJoinedChannels = async (userId) => {
-  const channels = ['@shadowofficial786', '@shadowbanproof'];
-  let allJoined = true;
-
-  for (const channel of channels) {
-    try {
-      const member = await bot.getChatMember(channel, userId);
-      if (['left', 'kicked'].includes(member.status)) {
-        allJoined = false;
-        break;
-      }
-    } catch {
-      allJoined = false;
-      break;
-    }
-  }
-  return allJoined;
-};
-
 // ========== SEND CHANNELS REQUIRED MESSAGE ==========
 const sendChannelsRequiredMessage = async (chatId) => {
   return bot.sendMessage(chatId,
