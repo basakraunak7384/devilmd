@@ -143,13 +143,6 @@ bot.onText(/\/pair(?:\s+(.+))?/, async (msg, match) => {
     return sendGroupMessage(chatId, msg.message_id);
   }
 
-  // 🔥 PRIVATE CHAT MEIN NORMAL PAIRING PROCESS
-  const allJoined = await checkUserJoinedChannels(userId);
-  
-  if (!allJoined) {
-    return sendChannelsRequiredMessage(chatId);
-  }
-
   if (!text) {
     userStates.set(userId, { step: 'awaiting_number' });
     return bot.sendMessage(chatId, 
