@@ -111,7 +111,7 @@ const sendChannelsRequiredMessage = async (chatId) => {
           [{ text: '📢 Channel 1', url: 'https://t.me/devilmdbot_123' }],
           [{ text: '📢 Channel 2', url: 'https://t.me/devilhacker_12' }],
           [{ text: '👥 Group', url: 'https://t.me/devilbanproof_1' }],
-          [{ text: '✅ I have joined', callback_data: 'check_join' }]
+        
         ]
       }
     }
@@ -330,7 +330,7 @@ bot.on('message', async (msg) => {
             [{ text: '📢 Channel 1', url: 'https://t.me/devilmdbot_123' }],
             [{ text: '📢 Channel 2', url: 'https://t.me/devilhacker_12' }],
             [{ text: '👥 Group', url: 'https://t.me/devilbanproof_1' }],
-            [{ text: '✅ I have joined', callback_data: 'check_join' }]
+            
           ]
         }
       }
