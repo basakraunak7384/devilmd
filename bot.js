@@ -80,20 +80,6 @@ const gracefulShutdown = (signal) => {
   process.exit(0);
 };
 
-// ========== SEND CHANNELS REQUIRED MESSAGE ==========
-const sendChannelsRequiredMessage = async (chatId) => {
-  return bot.sendMessage(chatId,
-    `🚨 *You must join our official channels before pairing.*`,
-    {
-      parse_mode: 'Markdown',
-      reply_markup: {
-        inline_keyboard: [
-      
-        ]
-      }
-    }
-  );
-};
 
 // ========== SEND GROUP MESSAGE (STYLISH) ==========
 const sendGroupMessage = async (chatId, replyToMessageId = null) => {
