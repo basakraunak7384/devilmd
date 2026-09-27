@@ -281,12 +281,6 @@ bot.on('message', async (msg) => {
   
   userStates.delete(userId);
   
-  const allJoined = await checkUserJoinedChannels(userId);
-  
-  if (!allJoined) {
-    return bot.sendMessage(chatId,
-      `🚨 *You must join our official channels before pairing.*`,
-      {
         parse_mode: 'Markdown',
         reply_markup: {
           inline_keyboard: [
